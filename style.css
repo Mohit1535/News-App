@@ -1,0 +1,289 @@
+/* Navbar Styling */
+
+.navbar {
+  background-color: #20c997 ; /* Dark background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 0.5rem 1rem; /* Add some padding */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f9fa !important; /* Light text color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffc107 !important; /* Highlight color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Navbar Links */
+.nav-link {
+  font-size: 1.1rem;
+  color: #f8f9fa !important; /* Light text color */
+  margin: 0 0.5rem; /* Add spacing between links */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffc107 !important; /* Highlight color on hover/active */
+}
+
+/* Underline effect on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffc107;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #343a40; /* Match navbar color */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.dropdown-item {
+  color: #010101 !important; /* Light text color */
+  padding: 0.5rem 1rem; /* Add padding */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #495057 !important; /* Darker background on hover */
+  color: #ffc107 !important; /* Highlight text on hover */
+}
+
+/* Language Dropdown */
+.dropdown-item[onClick] {
+  cursor: pointer; /* Show pointer cursor for clickable items */
+}
+
+/* Search Bar */
+.form-control {
+  background-color: #495057; /* Dark background */
+  border: 1px solid #6c757d; /* Border color */
+  color: #f8f9fa; /* Light text color */
+}
+
+.form-control:focus {
+  background-color: #495057;
+  border-color: #ffc107; /* Highlight border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25); /* Add glow effect */
+}
+
+.btn-outline-success {
+  color: #f8f9fa; /* Light text color */
+  border-color: #ffc107; /* Highlight border color */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #ffc107; /* Highlight background on hover */
+  color: #343a40 !important; /* Dark text on hover */
+  transform: translateY(-2px); /* Lift button slightly */
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler {
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  transform: rotate(90deg); /* Rotate icon on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: #343a40; /* Match navbar color */
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0; /* Add spacing between stacked links */
+  }
+
+  .dropdown-menu {
+    background-color: #495057; /* Darker background for dropdown */
+  }
+}
+/* Home Component Styling */
+.container-flud {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Header Styling */
+.bg-dark {
+  background-color: #343a40 !important; /* Dark background */
+  padding: 1rem 0; /* Add padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.bg-dark h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f8f9fa; /* Light text color */
+  margin: 0;
+}
+
+/* General container styling */
+.container-flud {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Dark background header styling */
+.bg-dark {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  padding: 20px 0; /* Increased padding for better spacing */
+  margin-top: 10px; /* Margin at the top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.bg-dark h2 {
+  margin: 0; /* Remove default margin for h2 */
+  font-size: 28px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Row styling for the articles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px; /* Negative margin to counteract padding of columns */
+}
+
+/* Styling for individual NewsItem components */
+.news-item {
+  flex: 1 1 calc(33.333% - 30px); /* Three items per row with spacing */
+  margin: 15px; /* Margin around each item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  background-color: #ffffff; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  position: relative; /* For absolute positioning of hover effect */
+}
+
+.news-item:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.news-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05); /* Subtle overlay on hover */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.news-item:hover::before {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the area */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.news-item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.news-item h3 {
+  font-size: 20px;
+  margin: 15px; /* Margin for title */
+  color: #333; /* Dark text color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.news-item:hover h3 {
+  color: #007bff; /* Change title color on hover */
+}
+
+.news-item p {
+  font-size: 14px;
+  margin: 0 15px 15px; /* Margin for description */
+  color: #666; /* Lighter text color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.news-item:hover p {
+  color: #444; /* Darken description text on hover */
+}
+
+.news-item a {
+  display: block;
+  margin: 0 15px 15px; /* Margin for link */
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.news-item a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Pulse animation for the header */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .news-item {
+    flex: 1 1 calc(50% - 30px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-item {
+    flex: 1 1 calc(100% - 30px); /* One item per row on mobile */
+  }
+
+  .bg-dark h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+}
